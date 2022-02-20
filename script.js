@@ -1,11 +1,29 @@
-// // create DOWNLOAD RESUME button and append to the RESUME section
-// let resumeTitleEl = $('#resume');
-// let downloadButtonEl = $('<button>');
-// downloadButtonEl.attr
-// downloadButtonEl.text('Download PDF');
-// // downloadButtonEl.addClass('') 
-// // add a bunch of TAILWIND.CSS CLASS TO STYLE THE BUTTON 
-// resumeTitleEl.append(downloadButtonEl);
+function DownloadFile(fileName) {
+    //Set the File URL.
+    var url = "02-Homework/the-emerge-portfolio/assets/" + fileName;
 
-//EVENT LISTENER FUNCTION: Download pdf of resume to user's machine
+    //Create XMLHTTP Request.
+    var req = new XMLHttpRequest();
+    req.open("GET", url, true);
+    req.responseType = "blob";
+    req.onload = function () {
+        //Convert the Byte Data to BLOB object.
+        var blob = new Blob([req.response], { type: "application/octetstream" });
 
+        //Check the Browser type and download the File.
+        var isIE = false || !!document.documentMode;
+        if (isIE) {
+            window.navigator.msSaveBlob(blob, fileName);
+        } else {
+            var url = window.URL || window.webkitURL;
+            link = url.createObjectURL(blob);
+            var a = document.createElement("a");
+            a.setAttribute("download", fileName);
+            a.setAttribute("href", link);
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+    };
+    req.send();
+};
