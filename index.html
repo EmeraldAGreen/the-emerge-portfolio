@@ -13,24 +13,24 @@
     <header>
         <h1>Emerald Green</h1>
         <p class="subtitle">Cool Subtitle Here</p>
-        <nav>
+        <aside>
             <ul>
                 <li>
                     <a href="#about-me">About Me</a>
                 </li>
-                <li>
-                    <a href="#deployed-projects">Deployed Projects</a>
-                </li>
-                <li>
+                    <li>
                     <a href="#resume">Resume</a>
 
                 </li>
                 <li>
-                    <a href="#contact-me">Contact Me</a>
+                    <a href="#deployed-projects">Deployed Projects</a>
                 </li>
-                
+            
+                <li>
+                    <a href="#contact-me">Contact Me</a>
+                </li> 
             </ul>
-        </nav>
+        </aside>
     </header>
     <main>
         <section id="about-me" class="about-me">
@@ -51,6 +51,17 @@
                     in technological engineering.
                 </p>
             </article>
+        </section>
+        <section id="resume" class="resume">
+            <h2>Download My Resume</h2>
+            <input type="button" value="Download PDF" onclick="DownloadFile('./')" />
+            <!-- padded image of my resume -->
+        </section>
+        <section id="deployed-projects" class="deployed-projects">
+            <h2>My Work</h2>
+            <div></div>
+            <div></div>
+            <div></div>
         </section>
         <main>
             <footer id="contact-me" class="contact-me">
