@@ -24,6 +24,20 @@ h2 {
     margin-top: 10%;
 }
 
+.deployed-projects {
+    margin-top: 10%;
+}
+
+.card {
+    margin-top: 10%;
+    margin-bottom: 10%; 
+    color:#004B69
+}
+
+.contact-me {
+    margin-top: 10%;
+}
+
 .navbar-brand {
     font-size: 70px;
     color: #cfd9db;
