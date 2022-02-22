@@ -1,3 +1,4 @@
+// Download resume in browser
 function DownloadFile(fileName) {
     //Set the File URL.
     var url = "02-Homework/the-emerge-portfolio/assets/" + fileName;
@@ -27,3 +28,4 @@ function DownloadFile(fileName) {
     };
     req.send();
 };
+

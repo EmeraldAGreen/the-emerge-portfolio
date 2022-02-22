@@ -1,3 +1,21 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+body {
+    font-family: 'Share Tech Mono', monospace;
+    background-color:#9C7810;
+}
+
+nav {
+    background-color: #006e9b;
+}
+
+.navbar-brand {
+    font-size: 45px;
+}
+
+.navbar-toggler {
+    background-color: #cfd9db;
+}
+
+.offcanvas {
+    background-color:#cfd9db;
+}
+
